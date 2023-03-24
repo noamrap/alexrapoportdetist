@@ -225,107 +225,113 @@
 
     <button onclick="window.location.href='index.html';" style="background-color: cyan; position: fixed; top: 10px; right: 10px; border: none; color: #000000; padding: 10px; border-radius: 50px; cursor: pointer;">בחזרה אל התפריט 
 <style>
-      table {
-        font-family: Arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
+    table th, table td {
+        padding: 12px;
+        border: 1px solid black;
+    }
 
-      th, td {
-        text-align: center;
-        padding: 8px;
-        border: 1px solid #ddd;
-      }
-
-      th {
-        background-color: #4CAF50;
+    table th {
+        background-color: black;
         color: white;
-      }
+        font-size: 20px;
+        text-transform: uppercase;
+    }
 
-      @media screen and (max-width: 600px) {
-        table, thead, tbody, th, td, tr {
-          display: block;
+    table tr:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
+
+    table tr:hover td {
+        color: black;
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            font-size: 14px;
         }
 
-        th {
-          text-align: center;
+        table th {
+            font-size: 16px;
         }
+    }
 
-        th {
-          position: absolute;
-          top: -9999px;
-          left: -9999px;
+    @media (max-width: 767px) {
+        table {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
+    }
+</style>
 
-        tr {
-          border: 1px solid #ddd;
-        }
-
-        td {
-          border: none;
-          border-bottom: 1px solid #ddd;
-          position: relative;
-          padding-left: 50%;
-        }
-
-        td:before {
-          position: absolute;
-          top: 6px;
-          left: 6px;
-          width: 45%;
-          padding-right: 10px;
-          white-space: nowrap;
-        }
-
-        td:nth-of-type(1):before {
-          content: "Day";
-        }
-
-        td:nth-of-type(2):before {
-          content: "Hours";
-        }
-      }
-    </style>
-  
-    <table>
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>Hours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>ראשון</td>
-          <td>12:00-20:00</td>
-        </tr>
-        <tr>
-          <td>שני</td>
-          <td>12:00-20:00</td>
-        </tr>
-        <tr>
-          <td>שלישי</td>
-          <td>12:00-20:00</td>
-        </tr>
-        <tr>
-          <td>רביעי</td>
-          <td>12:00-20:00</td>
-        </tr>
-        <tr>
-          <td>חמישי</td>
-          <td>12:00-20:00</td>
-        </tr>
-        <tr>
-          <td>שישי</td>
-          <td>08:30-13:00</td>
-        </tr>
-        <tr>
-          <td>שבת</td>
-          <td>סגור</td>
-        </tr>
-      </tbody>
+<div class="table-responsive">
+    <table id="schedule">
+        <thead>
+            <tr>
+                <th>יום</th>
+                <th>שעות</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ראשון</td>
+                <td>13:00-20:00</td>
+            </tr>
+            <tr>
+                <td>שני</td>
+                <td>13:00-20:00</td>
+            </tr>
+            <tr>
+                <td>שלישי</td>
+                <td>13:00-20:00</td>
+            </tr>
+            <tr>
+                <td>רביעי</td>
+                <td>13:00-20:00</td>
+            </tr>
+            <tr>
+                <td>חמישי</td>
+                <td>13:00-20:00</td>
+            </tr>
+            <tr>
+                <td>שישי</td>
+                <td>08:30-13:00</td>
+            </tr>
+            <tr>
+                <td>שבת</td>
+                <td>סגור למעט מקרי חירום, במקרי חירום נא ליצור קשר עם המרפאה: 054-4278007</td>
+            </tr>
+        </tbody>
     </table>
-    <p>בימי שבת המרפאה סגורה למעט מקרי חירום, במקרי חירום נא ליצור קשר עם המרפאה : 054-4278007</p>
+</div>
+
+<style>
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        td,
+        th {
+            width: auto !important;
+            border: none;
+        }
+    }
 </style>
 </body>
 
