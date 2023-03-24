@@ -223,70 +223,110 @@
 
 
 
-    <button onclick="window.location.href='index.html';" style="background-color: cyan; position: fixed; top: 10px; right: 10px; border: none; color: #000000; padding: 10px; border-radius: 50px; cursor: pointer;">בחזרה אל התפריט הראשי</button>
-
-
-
-
+    <button onclick="window.location.href='index.html';" style="background-color: cyan; position: fixed; top: 10px; right: 10px; border: none; color: #000000; padding: 10px; border-radius: 50px; cursor: pointer;">בחזרה אל התפריט 
 <style>
+      table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
+      th, td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
 
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
 
-
-
-
-
-    html {
-        font-size: 13px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-        margin-bottom: 1em;
-    }
-
-    .inner-container {
-        max-width: 60em;
-        margin: 0 auto;
-        padding: 2em;
-    }
-
-
-    @media screen and (max-width: 767px) {
-        .inner-container {
-            padding: 1em;
+      @media screen and (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+          display: block;
         }
 
-        h1 {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        .inner-container {
-            padding: 1.5em;
+        th {
+          text-align: center;
         }
 
-        h1 {
-            font-size: 1.8rem;
-        }
-    }
-
-    @media screen and (min-width: 1024px) {
-        .inner-container {
-            padding: 2em;
+        th {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
         }
 
-        h1 {
-            font-size: 2.2rem;
+        tr {
+          border: 1px solid #ddd;
         }
-    }
 
-    .body {
-        background-image: url("https://le-cdn.hibuwebsites.com/16f664e1d51f4500a5e1235d3cf0aa2e/dms3rep/multi/opt/king-street-dental-care-hero-home-1920w.jpg");
-        height: 250vh;
-        background-size: cover;
-        background-repeat:no-repeat;
-    }
+        td {
+          border: none;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+          padding-left: 50%;
+        }
+
+        td:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before {
+          content: "Day";
+        }
+
+        td:nth-of-type(2):before {
+          content: "Hours";
+        }
+      }
+    </style>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ראשון</td>
+          <td>12:00-20:00</td>
+        </tr>
+        <tr>
+          <td>שני</td>
+          <td>12:00-20:00</td>
+        </tr>
+        <tr>
+          <td>שלישי</td>
+          <td>12:00-20:00</td>
+        </tr>
+        <tr>
+          <td>רביעי</td>
+          <td>12:00-20:00</td>
+        </tr>
+        <tr>
+          <td>חמישי</td>
+          <td>12:00-20:00</td>
+        </tr>
+        <tr>
+          <td>שישי</td>
+          <td>08:30-13:00</td>
+        </tr>
+        <tr>
+          <td>שבת</td>
+          <td>סגור</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>בימי שבת המרפאה סגורה למעט מקרי חירום, במקרי חירום נא ליצור קשר עם המרפאה : 054-4278007</p>
 </style>
+</body>
+
+</html>
